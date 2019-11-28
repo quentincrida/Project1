@@ -9,7 +9,7 @@ winery1 = Winery.new({
   "address" => "Excelsior Road, Franschhoek, 7690"  })
 
 
-#  winery1.save()
+  winery1.save()
 
 
 binding.pry
