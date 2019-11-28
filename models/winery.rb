@@ -18,5 +18,11 @@ class Winery
     values = [@name, @address]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
-end
+  end
+
+  def self.delete_all
+    sql = "DELETE FROM wineries"
+    SqlRunner.run(sql)
+  end
+  
 end
