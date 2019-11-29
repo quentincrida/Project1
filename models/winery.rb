@@ -24,5 +24,10 @@ class Winery
     sql = "DELETE FROM wineries"
     SqlRunner.run(sql)
   end
-  
+
+  def self.all()
+    sql = "SELECT * FROM wineries"
+    results = SqlRunner.run(sql)
+    return results.map {|winery| Winery.new(winery)}
+  end
 end
