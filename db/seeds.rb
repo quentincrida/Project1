@@ -17,5 +17,17 @@ winery2 = Winery.new({
   })
 
   winery2.save()
+
+
+  wine_1 = Wine.new({
+    "name" => "Boekenhoutskloof",
+    "description" => "Syrah",
+    "stock" => 24,
+    "cost" => 12,
+    "price" => 24
+    })
+
+    wine_1.save()
+    
 binding.pry
 nil

@@ -30,4 +30,14 @@ class Winery
     results = SqlRunner.run(sql)
     return results.map {|winery| Winery.new(winery)}
   end
+
+  def update()
+    sql = "UPDATE wineries SET (name, address)
+    = ($1, $2) WHERE id = $3"
+    values = [@name, @address, @id]
+    SqlRunner.run(sql)
+  end
+
+
+
 end
