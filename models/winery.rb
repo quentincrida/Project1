@@ -4,16 +4,16 @@ require_relative('../db/sql_runner')
 class Winery
 
   attr_reader :id, :name, :address
-
+#constructor
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @address = options['address']
   end
 
-  def get_name(winery)
-    return winery[:name]
-  end
+  # def get_name
+  #   return @winery1.get_name
+  # end
 
   def save()
     sql = "INSERT INTO wineries (

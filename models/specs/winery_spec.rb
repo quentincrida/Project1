@@ -18,17 +18,13 @@ class TestWinery < MiniTest::Test
 
   end
 
-  def  setup
-    @winery1 = {
-      name: "Boekenhoutskloof",
-      address: "Excelsior Road, Franschhoek, 7690, South Africa"
-    }
-  end
-
-  def test_get_name
-    result = get_name(@winery1)
-    assert_equal("Boekenhoutskloof", result)
-  end
+  def test_winery_address
+    winery_options = {  'name' => 'Groot Constantia',
+      'address' => 'Groot Constantia Rd, Constantia, Cape Town, 7806, South Africa'
+      }
+      winery_address = Winery.new(winery_options)
+      assert_equal('Groot Constantia Rd, Constantia, Cape Town, 7806, South Africa', winery_address.address)
+    end
 
 
 
