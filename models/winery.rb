@@ -1,5 +1,6 @@
 require_relative('../db/sql_runner')
 
+
 class Winery
 
   attr_reader :id, :name, :address
@@ -10,6 +11,9 @@ class Winery
     @address = options['address']
   end
 
+  def get_name(winery)
+    return winery[:name]
+  end
 
   def save()
     sql = "INSERT INTO wineries (
