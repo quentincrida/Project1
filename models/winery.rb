@@ -11,9 +11,6 @@ class Winery
     @address = options['address']
   end
 
-  # def get_name
-  #   return @winery1.get_name
-  # end
 
   def save()
     sql = "INSERT INTO wineries (

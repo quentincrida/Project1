@@ -12,27 +12,27 @@ class Wine
     @price = options['price'].to_i
   end
 
-  def save()
-    sql = "INSERT INTO wines
-    (name, description, stock, cost, price)
-    VALUES ($1, $2, $3, $4, $5) RETURNING id"
-    values = [@name, @description, @stock, @cost, @price]
-    results = SqlRunner.run(sql, values)
-    @id = results.first()['id'].to_i
+  # def save()
+  #   sql = "INSERT INTO wines
+  #   (name, description, stock, cost, price)
+  #   VALUES ($1, $2, $3, $4, $5) RETURNING id"
+  #   values = [@name, @description, @stock, @cost, @price]
+  #   results = SqlRunner.run(sql, values)
+  #   @id = results.first()['id'].to_i
+  #
+  # end
+  #
+  # def self.delete_all()
+  #   sql = "DELETE FROM wines"
+  #   SqlRunner.run(sql)
+  # end
 
-  end
-
-  def self.delete_all()
-    sql = "DELETE FROM wines"
-    SqlRunner.run(sql)
-  end
-
-  def self.all()
-    sql = "SELECT * FROM wines"
-    results = SqlRunner.run(sql,values)
-    return results.map{|wine| Wine.new(wine)}
-  end
-
+  # def self.all()
+  #   sql = "SELECT * FROM wines"
+  #   results = SqlRunner.run(sql,values)
+  #   return results.map{|wine| Wine.new(wine)}
+  # end
+  #
 
 
 
