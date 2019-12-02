@@ -1,10 +1,10 @@
 require_relative("../models/winery.rb")
-#require_relative("../models/wine.rb")
+require_relative("../models/wine.rb")
 require('pry')
 
 
 Winery.delete_all()
-# Wine.delete_all()
+Wine.delete_all()
 
 winery1 = Winery.new({
   "name" => "Boekenhoutskloof",
@@ -29,26 +29,28 @@ winery2 = Winery.new({
 
 
 
-  #
-  # wine1 = Wine.new({
-  #   "name" => "Syrah",
-  #   "description" => "red",
-  #   "stock" => 24,
-  #   "cost" => 12,
-  #   "price" => 24
-  #   })
-  #
-  #  wine1.save()
-  #
-  #  wine2 = Wine.new({
-  #    "name" => "Chenin Blanc",
-  #    "description" => "white",
-  #    "stock" =>5,
-  #    "cost" => 7,
-  #    "price" => 12
-  #    })
-  #
-  #   wine2.save()
+
+  wine1 = Wine.new({
+    "name" => "Syrah",
+    "description" => "red",
+    "stock" => 24,
+    "cost" => 12,
+    "price" => 24,
+    "winery_id" => winery1.id
+
+    })
+
+   wine1.save()
+
+   wine2 = Wine.new({
+     "name" => "Chenin Blanc",
+     "description" => "white",
+     "stock" =>5,
+     "cost" => 7,
+     "price" => 12
+     })
+
+    wine2.save()
 
 binding.pry
 nil

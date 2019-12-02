@@ -40,6 +40,6 @@ also_reload('../models/*')
   #update
   post '/wineries/:id' do
     winery = Winery.new(params)
-    customer.update()
+    winery.update()
     redirect '/wineries'
   end
