@@ -6,12 +6,13 @@ also_reload('../models/*')
 
 # index
 get'/wines' do
-  @wines = Winery.all()
+  @wines = Wine.all()
   erb (:"wines/index")
 end
 
 #new
 get '/wines/new' do
+  
   erb(:"wines/new")
 end
 

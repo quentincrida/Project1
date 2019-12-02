@@ -47,7 +47,8 @@ winery2 = Winery.new({
      "description" => "white",
      "stock" =>5,
      "cost" => 7,
-     "price" => 12
+     "price" => 12,
+     "winery_id" => winery2.id
      })
 
     wine2.save()

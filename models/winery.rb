@@ -1,9 +1,11 @@
 require_relative('../db/sql_runner')
+require_relative('./wine.rb')
 
 
 class Winery
 
-  attr_reader :id, :name, :address
+  attr_reader :id
+  attr_accessor :name, :address
 #constructor
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -31,6 +33,13 @@ class Winery
     results = SqlRunner.run(sql)
     return results.map {|winery| Winery.new(winery)}
   end
+
+  def self.find(id)
+    sql = "SELECT * FROM wineries WHERE id = $1"
+    values = [id]
+    farm_hash = SqlRunner.run(sql, values)[0]
+    return Winery.new(farm_hash)
+  end 
 
   def update()
     sql = "UPDATE wineries SET (name, address)
