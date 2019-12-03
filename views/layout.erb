@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Western Cape Wines</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=ß, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>wines</title>
-</head>
-<body>
-  <nav>
-    <ul>
-       <li><a href="/wineries">All Wineries</a></li>
-      <li><a href="/wineries/new">Add a Winery</a></li>
-      <!-- <li><a href="/wineries/edit">Update Winery details</a></li> -->
-      <li><a href="/wines">Inventory of Stock</a></li>
-      <li><a href="/wines/new">Add new Wine</a></li>
-     <!-- <li><a href="/wines/edit">Update Wine Details</a></li> -->
-    </ul></nav>
-  <h4>PROPERTY OF WESTERN CAPE WINES</h4>
+  <head>
 
-  <%= yield %>
-</body>
+    <title>Western Cape Wines</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ß, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/style.css">
+    <title>Western Cape Wines</title>
+  </head>
+  <body>
+
+    <nav>
+        <ul>
+        <li><a href="/wineries">All Wineries</a></li>
+        <li><a href="/wineries/new">Add a Winery</a></li>
+        <li><a href="/wines">Inventory of Stock</a></li>
+        <li><a href="/wines/new">Add new Wine</a></li>
+      </ul>
+    </nav>
+    <h4><tt>PROPERTY OF WESTERN CAPE WINES</tt></h4>
+
+    <%= yield %>
+  </body>
 </html>

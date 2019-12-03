@@ -1,67 +1,39 @@
 <table>
 
-<caption>Wine Inventory</caption>
+  <caption>Wine Inventory</caption>
 
-<thead>
-<tr>
-<th>Winery Name</th>
-<th>Wine Name</th>
-<th>Description</th>
-<th>Stock</th>
-<th>Stock Level</th>
-<th>Cost</th>
-<th>Price</th>
-</tr>
+    <thead>
+      <tr>
+      <th>Winery Name</th>
+      <th>Wine Name</th>
+      <th>Description</th>
+      <th>Stock</th>
+      <th>Stock Level</th>
+      <th>Cost</th>
+      <th>Price</th>
+      </tr>
 
-</thead>
+    </thead>
 
-<tbody>
+  <tbody>
 
-<% for wine in @wines %>
-<tr>
-  <td><%= wine.show_winery.name  %></a></td>
-  <td><%= wine.name() %></td>
-  <td><%= wine.description %></td>
-  <td><%= wine.stock() %></td>
-  <td><% if wine.stock().to_i == 0%>
-  Out of Stock
-      <% elsif wine.stock().to_i <= 5 %>
-      Stock Low
-     <% else %>
-     Stock Healthy
-      <% end %> </td>
-  <td><%= wine.cost() %></td>
-  <td><%= wine.price() %></td>
-  </tr>
-  <% end %>
+  <% for wine in @wines %>
+  <tr>
+    <td><%= wine.show_winery.name  %></a></td>
+    <td><%= wine.name() %></td>
+    <td><%= wine.description %></td>
+    <td><%= wine.stock() %></td>
+    <td><% if wine.stock().to_i == 0%>
+    Out of Stock
+        <% elsif wine.stock().to_i <= 5 %>
+        Stock Low
+       <% else %>
+       Stock Healthy
+        <% end %> </td>
+    <td><%= wine.cost() %></td>
+    <td><%= wine.price() %></td>
+    </tr>
+    <% end %>
 
-</tbody>
+  </tbody>
 </table>
-
-
-
-
-</table>
-
-
-
-<!-- <h3>Wine Inventory</h3>
-<hr />
-<% for wine in @wines %>
-<p>Winery Name: <%= wine.show_winery.name %></p>
- <p>Name: <%= wine.name() %></p>
- <p>Description: <%= wine.description() %></p>
- <p>Stock: <%= wine.stock() %></p>
- <% if wine.stock().to_i == 0%>
- <p>Out of Stock</p>
-     <% elsif wine.stock().to_i <= 5 %>
-     <p>Stock Low</p>
-    <% else %>
-    <p>Stock Healthy</p>
-     <% end %>
-<p>Cost: <%= wine.cost() %></p>
-<p>Price: <%= wine.price() %></p>
-<hr />
-<% end %>
-
-<p><a href="/wines/new">Add Wine</a></p> -->
