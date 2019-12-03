@@ -31,7 +31,6 @@ winery2 = Winery.new({
 
 
   wine1 = Wine.new({
-  #  "Winery Name" => winery1.name,
     "name" => "Syrah",
     "description" => "red",
     "stock" => 24,
@@ -44,7 +43,6 @@ winery2 = Winery.new({
    wine1.save()
 
    wine2 = Wine.new({
-  #   "Winery Name" => winery2.name,
      "name" => "Chenin Blanc",
      "description" => "white",
      "stock" =>5,
@@ -54,6 +52,23 @@ winery2 = Winery.new({
      })
 
     wine2.save()
+
+
+
+    wine3 = Wine.new({
+      "name" => "Cabernet Sauvignon",
+      "description" => "red",
+      "stock" => 0,
+      "cost" => 17,
+      "price" => 32,
+      "winery_id" => winery1.id
+      })
+
+     wine3.save()
+
+
+
+
 
 binding.pry
 nil

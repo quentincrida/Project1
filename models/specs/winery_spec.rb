@@ -25,7 +25,3 @@ class TestWinery < MiniTest::Test
       winery_address = Winery.new(winery_options)
       assert_equal('Groot Constantia Rd, Constantia, Cape Town, 7806, South Africa', winery_address.address)
     end
-
-
-
-end

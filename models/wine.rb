@@ -56,9 +56,5 @@ class Wine
     #return Wine.new(result)
   end
 
-  def stock_alert()
-
-  end
-
 
 end

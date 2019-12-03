@@ -5,6 +5,13 @@
  <p>Name: <%= wine.name() %></p>
  <p>Description: <%= wine.description() %></p>
  <p>Stock: <%= wine.stock() %></p>
+ <% if wine.stock().to_i == 0%>
+ <p>Out of Stock</p>
+     <% elsif wine.stock().to_i <= 5 %>
+     <p>Stock Low</p>
+    <% else %>
+    <p>Stock Healthy</p>
+     <% end %>
 <p>Cost: <%= wine.cost() %></p>
 <p>Price: <%= wine.price() %></p>
 <hr />
