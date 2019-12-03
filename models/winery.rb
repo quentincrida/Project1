@@ -37,9 +37,10 @@ class Winery
   def self.find(id)
     sql = "SELECT * FROM wineries WHERE id = $1"
     values = [id]
-    farm_hash = SqlRunner.run(sql, values)[0]
+    farm_hash = SqlRunner.run(sql, values).first()
+    p farm_hash
     return Winery.new(farm_hash)
-  end 
+  end
 
   def update()
     sql = "UPDATE wineries SET (name, address)

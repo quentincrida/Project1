@@ -31,6 +31,7 @@ winery2 = Winery.new({
 
 
   wine1 = Wine.new({
+  #  "Winery Name" => winery1.name,
     "name" => "Syrah",
     "description" => "red",
     "stock" => 24,
@@ -43,6 +44,7 @@ winery2 = Winery.new({
    wine1.save()
 
    wine2 = Wine.new({
+  #   "Winery Name" => winery2.name,
      "name" => "Chenin Blanc",
      "description" => "white",
      "stock" =>5,

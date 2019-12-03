@@ -1,0 +1,13 @@
+<h3>Wine Inventory</h3>
+<hr />
+<% for wine in @wines %>
+<p>Winery Name: <%= wine.show_winery.name %></p>
+ <p>Name: <%= wine.name() %></p>
+ <p>Description: <%= wine.description() %></p>
+ <p>Stock: <%= wine.stock() %></p>
+<p>Cost: <%= wine.cost() %></p>
+<p>Price: <%= wine.price() %></p>
+<hr />
+<% end %>
+
+<p><a href="/wines/new">Add Wine</a></p>

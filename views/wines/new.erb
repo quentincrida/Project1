@@ -1,0 +1,35 @@
+<form action="/wines" method="POST">
+
+<label for="winery">Winery:</label>
+<select name="winery_id" id="winery">
+  <% for winery in @wineries %>
+    <option value="<%= winery.id %>">
+      <%= winery.name() %>
+    </option>
+   <% end %>
+</select>
+
+
+  <label for="name">Wine Name:</label>
+
+  <input required type="text" id="name"
+  name="name">
+
+  <label for="description">Description:</label>
+  <input required type="text" id="description" name="description">
+
+  <label for="stock">Stock:</label>
+  <input required type="number" id="stock" name="stock">
+
+  <label for="cost">Cost:</label>
+  <input required type="number" id="stock" name="stock">
+
+  <label for="price">Price:</label>
+  <input required type="number" id="price" name="price">
+
+
+
+  <input type="submit" value="Add Wine">
+
+
+</form>

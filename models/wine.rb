@@ -1,6 +1,7 @@
 require_relative('../db/sql_runner')
 require_relative('./winery.rb')
 
+
 class Wine
 
   attr_reader :name, :description, :stock, :cost, :price, :winery_id
@@ -33,7 +34,7 @@ class Wine
 
   def self.all()
     sql = "SELECT * FROM wines"
-    results = SqlRunner.run(sql,values)
+    results = SqlRunner.run(sql)
     return results.map{|wine| Wine.new(wine)}
   end
 
@@ -47,7 +48,17 @@ class Wine
 
   end
 
+  def show_winery()
+    sql = "SELECT * FROM wineries WHERE id = $1"
+    values = [@winery_id]
+    winery_hash = SqlRunner.run(sql, values).first
+    return Winery.new(winery_hash)
+    #return Wine.new(result)
+  end
 
+  def stock_alert()
+
+  end
 
 
 end

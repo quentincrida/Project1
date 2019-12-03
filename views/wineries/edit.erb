@@ -1,2 +1,12 @@
-<p>Name: <%= @winery.name() %></p>
-<p>Address:<%= @winery.address() %></p>
+<form action="/wineries<%= @winery.id %> method="POST">
+
+  <label for="name">Name:</label>
+  <input required type="text"> id="name" name="name" value="<%= @winery.name %>"
+
+  <label for="address">Address:</label>
+  <input required type="text" id="address" name="address"
+  value = "<%= @winery.address %>">
+
+  <input type="submit" value="Edit Winery">
+
+</form>

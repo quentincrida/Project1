@@ -2,7 +2,7 @@
 <h3>All of our Suppliers</h3>
 <hr />
   <% for winery in @wineries %>
-    <p><%= winery.name() %></p>
+    <p>Name: <%= winery.name() %></p>
     <p><a href="/wineries/<%= winery.id %>">Show details</a></p>
     <hr />
   <% end %>

@@ -12,7 +12,7 @@ end
 
 #new
 get '/wines/new' do
-  
+  @wineries = Winery.all()
   erb(:"wines/new")
 end
 
