@@ -1,19 +1,18 @@
 body{
-  background-color: black;
-  /* background-image: url('/public/images/Groot  Constantia.jpeg'); */
+  background-color: #922B21;
+  background-image: url('/public/images/Groot  Constantia.jpeg'); */
 }
 
 p {
   color: orange;
   font-size: 25px;}
-/* .title {
-  display
+
+a {
+  color: yellow;
+  font-size: 15px;
 }
 
-background-image: url('/public/images/Groot  Constantia.jpeg');
-background-repeat: no-repeat;
-background-size: cover;
-width: 100vw;
-height: 100vh;
-display: flex;
-justify-content: center; */
+caption { color: black;
+  font-size: 30px
+
+}
