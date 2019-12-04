@@ -1,7 +1,7 @@
 body{
 
   background: url('/images/Groot_Constantia.jpeg');
- background-size: 130%;
+ background-size: 125%;
 background-repeat: no-repeat;
 padding: 12px 20px;
 font-family: 'Courier', serif;
@@ -13,16 +13,20 @@ title {
 
 p {
   color: black;
-  font-size: 25px;}
+  font-size: 20px;}
 
 a {
   color: black;
   font-size: 15px;
 }
 
-.winery_new {
+f {
+  color: red;
+}
 
+.winery_new {
   background-color: #AED6F1;
+  opacity: 0.8;
 
 }
 .light-background {
@@ -39,4 +43,10 @@ a {
 .winery_details {
   background-color: #AED6F1;
   opacity: 0.8;
+}
+
+.wine_new {
+  background-color: #AED6F1;
+  opacity: 0.8;
+  font-size: 18;
 }
