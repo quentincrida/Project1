@@ -1,7 +1,7 @@
-<form action="/wineries<%= @winery.id %> method="POST">
+<form action="/wineries/<%=@winery.id %>" method="POST">
 
   <label for="name">Name:</label>
-  <input required type="text"> id="name" name="name" value="<%= @winery.name %>"
+  <input required type="text" id="name" name="name" value = "<%=@winery.name %>">
 
   <label for="address">Address:</label>
   <input required type="text" id="address" name="address"

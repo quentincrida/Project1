@@ -1,0 +1,22 @@
+<form action="/wine/<%= @wine.id %> method="POST">
+
+  <label for="name">Name:</label>
+  <input required type="text" id="name" name="name" value="<%=@wine.name %>">
+
+
+  <label for="description">Description:</label>
+  <input required type="text" id="description" name="description" value="<%=@wine.description %>">
+
+  <label for="stock">Stock:</label>
+  <input required type="number" min="0" id="stock" name="stock" value="<%=@wine.stock %>">
+
+  <label for="cost">Cost:</label>
+  <input required type="number" id="cost" name="cost" value="<%=@wine.cost %>">
+
+  <label for="price">Price:</label>
+  <input required type="number" id="price" name="price" value="<%=@wine.price %>">
+
+
+  <input type="submit" value="Edit Wine">
+
+</form>
