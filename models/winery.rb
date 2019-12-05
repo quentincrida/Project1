@@ -46,7 +46,7 @@ class Winery
     sql = "UPDATE wineries SET (name, address)
     = ($1, $2) WHERE id = $3"
     values = [@name, @address, @id]
-    SqlRunner.run(sql)
+    SqlRunner.run(sql, values)
   end
 
 

@@ -4,8 +4,8 @@ require_relative('./winery.rb')
 
 class Wine
 
-  attr_reader :name, :description, :stock, :cost, :price, :winery_id
-  attr_accessor :id
+  attr_accessor :name, :description, :stock, :cost, :price, :winery_id
+  attr_reader :id
 
   def initialize( options)
     @id = options['id'].to_i if options['id']
