@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 require_relative('./wine.rb')
 
 
-class Winery
+class Winery  
 
   attr_reader :id
   attr_accessor :name, :address
