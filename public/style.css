@@ -42,11 +42,17 @@ f {
 
 .winery_details {
   background-color: #AED6F1;
-  opacity: 0.8;
+  opacity: 0.2;
 }
 
 .wine_new {
   background-color: #AED6F1;
   opacity: 0.8;
   font-size: 18;
+}
+
+.winery_edit {
+  background-color: #AED6F1;
+  opacity: 0.5;
+
 }

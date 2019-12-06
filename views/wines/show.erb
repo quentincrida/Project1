@@ -1,6 +1,9 @@
 
+
 <p>Name: <%= @wine.name %></p>
 <p>Description: <%= @wine.description() %></p>
 <p>Stock:<%= @wine.stock() %></p>
 <p>Cost: <%= @wine.cost() %></p>
 <p>Price:<%= @wine.price() %></p>
+
+<p><a href="/wines/<%= @wine.id %>/edit">Edit Wine</a></p>
