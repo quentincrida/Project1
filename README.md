@@ -20,12 +20,13 @@ Possible Extensions
 
 #WESTERN CAPE WINES: WINE SHOP
 to run this file:
-- create database. In terminal createdb wine_shop
-- run seeds file. In terminal ruby db/seeds.rb
-- psql -d
+- create database: In terminal createdb wine_shop
+- psql -d wine_shop -f db/wine_shop.sql
+- ruby db/seeds.rb
+- in a separate terminal window: ruby controller.(control c to exit)
+- navigate to browser and enter: localhost: 4567
 - ensure sinatra gem is installed (sudo gem install )
-- spin up server: ruby controller (control c to exit)
-- navigate to browser, enter: localhost: 4567
+- sinatra contrib
 -See Home screen
 - Tabs: All Wineries, Add a winery, View Inventory,Add new Wine.
 - Click on tabs, All Wineries => Show Wineries => Edit/Update wineries

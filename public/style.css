@@ -26,7 +26,7 @@ f {
 
 .winery_new {
   background-color: #AED6F1;
-  opacity: 0.8;
+  opacity: 0.5;
 
 }
 .light-background {
@@ -42,12 +42,12 @@ f {
 
 .winery_details {
   background-color: #AED6F1;
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
 .wine_new {
   background-color: #AED6F1;
-  opacity: 0.8;
+  opacity: 0.5;
   font-size: 18;
 }
 
